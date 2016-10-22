@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1>Welcome to my website!</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+ <p>I am learning about the basics of HTML. This is a paragraph.</p>
+
+</div>
